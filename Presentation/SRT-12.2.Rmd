@@ -28,7 +28,7 @@ Given no observed events in n trials, a 95% upper bound on the rate of occurence
 # Answer to the scenario
 
 - Given no observed events in 20 trials, a 95% upper bound on the rate of occurence is 3/20=0.15.
-- Even though there is no fatalities in the past 20 operations, the rate is still as high as 15%.
+- Even though there are no fatalities in the past 20 operations, the rate is still as high as 15%.
 
 # Basis of the Rule
 
