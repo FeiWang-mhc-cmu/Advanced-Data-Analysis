@@ -50,4 +50,3 @@ The concentration of a microorganism in a water source is 1% per liter. How many
 
 - No observed events, n trials, 95% upper bound -> 3/n
 - Can solve for n as well, i.e. n=3/a
-
