@@ -25,24 +25,23 @@ Fei Wang, STAT495
 </div>
 <div id="rule-of-thumb" class="slide section level1">
 <h1>Rule of Thumb</h1>
-<p>Given no observed events in n trials, a 95% upper bound on the rate of occurence is 3/n.</p>
+<p>Given no observed events in n trials, a 95% upper bound on the rate of occurence is <span class="math">\(\frac{3}{n}\)</span>.</p>
 </div>
 <div id="answer-to-the-scenario" class="slide section level1">
 <h1>Answer to the scenario</h1>
 <ul>
-<li>Given no observed events in 20 trials, a 95% upper bound on the rate of occurence is 3/20=0.15.</li>
+<li>Given no observed events in 20 trials, a 95% upper bound on the rate of occurence is <span class="math">\(\frac{3}{20}=0.15\)</span>.</li>
 <li>Even though there are no fatalities in the past 20 operations, the rate is still as high as 15%.</li>
 </ul>
 </div>
 <div id="basis-of-the-rule" class="slide section level1">
 <h1>Basis of the Rule</h1>
 <ul>
-<li>Assume the event Y is a Poisson (a) with n samples.</li>
+<li>Assume the event Y is a Poisson(<span class="math">\(\lambda\)</span>) with n samples.</li>
 <li>(Pop Quiz: Why Poisson? Hint: Amanda’s presentation on Poisson)</li>
-<li>Sum of indept Possion variables is also Poisson -&gt; Poisson (na)</li>
-<li>At least one Yi is not zero -&gt; Pr(Sum of Yi is greater than 0)</li>
-<li>Pr(sum of Yi equals to 0) = exp(-na) = 0.05</li>
-<li>Solve for a</li>
+<li>Sum of indept Possion variables is also Poisson <span class="math">\[ Y1 + Y2 + Y3 +...+ Yn \sim \operatorname{Pois} \left({n*\lambda}\right) \]</span></li>
+<li>At least one Yi is not zero -&gt; <span class="math">\(\Pr(\Sigma {Yi} &gt; 0) = 0.95\)</span> <span class="math">\[\Pr(\Sigma \left({Yi}\right) = 0) = e^{-n*\lambda} = 0.05\]</span></li>
+<li>Take log on both sides <span class="math">\[ n*\lambda = -\log {0.05} \approx 3 \rightarrow \lambda \approx 3/n\]</span></li>
 </ul>
 </div>
 <div id="assessment" class="slide section level1">
@@ -52,14 +51,14 @@ Fei Wang, STAT495
 <div id="answer" class="slide section level1">
 <h1>Answer</h1>
 <ul>
-<li>3/0.01=300 L</li>
+<li><span class="math">\(\frac{3}{0.01}=300 L\)</span></li>
 </ul>
 </div>
 <div id="closing-thoughts" class="slide section level1">
 <h1>Closing thoughts</h1>
 <ul>
-<li>No observed events, n trials, 95% upper bound -&gt; 3/n</li>
-<li>Can solve for n as well, i.e. n=3/a</li>
+<li>No observed events, n trials, 95% upper bound -&gt; <span class="math">\(\frac{3}{n}\)</span></li>
+<li>Can solve for n as well, i.e. n=<span class="math">\(\frac{3}{\lambda}\)</span></li>
 </ul>
 </div>
 
