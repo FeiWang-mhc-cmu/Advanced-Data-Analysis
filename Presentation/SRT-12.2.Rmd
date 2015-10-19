@@ -35,7 +35,7 @@ Given no observed events in n trials, a 95% upper bound on the rate of occurence
 - Assume the event Y is a Poisson (a) with n samples. 
 - (Pop Quiz: Why Poisson? Hint: Amanda's presentation on Poisson)
 - Sum of indept Possion variables is also Poisson -> Poisson (na)
-- Pr(At least one Yi is not zero) = Pr(Sum of Yi is greater than 0)
+- At least one Yi is not zero -> Pr(Sum of Yi is greater than 0)
 - Pr(sum of Yi equals to 0) = exp(-na) = 0.05
 - Solve for a 
 
@@ -44,6 +44,7 @@ Given no observed events in n trials, a 95% upper bound on the rate of occurence
 The concentration of a microorganism in a water source is 1% per liter. How many liters must I take to be 95% sure that I have at least one organism?
 
 # Answer
+
 - 3/0.01=300 L
 
 # Closing thoughts
