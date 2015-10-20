@@ -1,0 +1,65 @@
+---
+title: "Presentation Template in R Markdown"
+author: Nicholas Horton, STAT495
+date: September 15, 2015
+output:
+  beamer_presentation:
+    theme: "AnnArbor"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+---
+
+```{r message=FALSE, echo=FALSE}
+require(mosaic)
+options(digits=3)
+trellis.par.set(theme=theme.mosaic())
+```
+
+# Introduction
+
+## A set of talking points
+
+- Cite the section you are discussing
+- Provide a full statement of the problem
+
+## A different set of talking points
+
+- Think of ways to engage students with a `clicker` question
+- Provide a motivating example
+
+# A gratuitous image
+
+![random png](http://itk.org/Wiki/images/9/99/ITK_Examples_Baseline_IO_TestImageFileReader.png)
+
+# Statement of the problem
+
+Pepys was trying to determine the probabilities of seeing at least $m$ sixes when $6m$ six-sided dice were tossed.  What happens to this probability as $m$ gets larger?
+
+SOLUTION: We know that when $m$=1, P(at least one six) = 1-P(no sixes) = $1 - (5/6)^6$ = 0.665102 and that from class, we know that the probability decreases for $m=2$ and $m=3$.  Is there a limiting behavior?
+
+
+# Simulation
+
+```{r, fig.keep='last', echo=FALSE}
+# note special chunk option!
+m <- 1:100   # try changing this to 1:2500
+proba <- 1 - pbinom(m-1, size=6*m, prob=1/6)
+xyplot(proba ~ m, type=c("p", "l"), 
+       ylim=c(0.49, max(proba)), # make sure we see the line at 0.50
+       xlab="threshold for number of sixes", 
+       ylab="probability of seeing at least that many")
+ladd(panel.abline(h=0.50))  # add the line at 0.50
+```
+
+
+
+
+----
+
+
+## Closing thoughts
+
+- Summarize key take home points
+- Bring back to motivating example
+- Solicit questions
+
