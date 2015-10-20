@@ -1,0 +1,55 @@
+---
+title: "Rule of Threes to Calculate 95% Upper Bounds When There Have Been No Events"
+author: "Fei Wang, STAT495"
+date: "Oct 20, 2015"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme: structurebold
+    theme: AnnArbor
+---
+
+```{r message=FALSE, echo=FALSE}
+require(mosaic)
+options(digits=3)
+trellis.par.set(theme=theme.mosaic())
+```
+
+# Scenario
+
+"I am told by my physician that I need a serious operation and have been informed that there has NOT been a fatal outcome in the 20 operations carried out by the physician. Does this information give me an estimate of the potential postoperative mortality?"
+
+# Rule of Thumb
+
+Given no observed events in n trials, a 95% upper bound on the rate of occurence is $\frac{3}{n}$.
+
+# Answer to the scenario
+
+- Given no observed events in 20 trials, a 95% upper bound on the rate of occurence is $\frac{3}{20}=0.15$.
+- Even though there are no fatalities in the past 20 operations, the rate is still as high as 15%.
+
+# Basis of the Rule
+
+- Assume the event Y is a Poisson($\lambda$) with n samples. 
+- (Pop Quiz: Why Poisson? Hint: Amanda's presentation on Poisson)
+- Sum of indept Possion variables is also Poisson 
+$$ Y1 + Y2 + Y3 +...+ Yn \sim \operatorname{Pois} \left({n*\lambda}\right) $$
+- At least one Yi is not zero -> $\Pr(\Sigma {Yi} > 0) = 0.95$ 
+$$\Pr(\Sigma \left({Yi}\right) = 0) = e^{-n*\lambda} = 0.05$$ 
+- Take log on both sides
+$$ n*\lambda = -\log {0.05} \approx 3 \rightarrow \lambda \approx 3/n$$
+
+# Assessment 
+
+The concentration of a microorganism in a water source is 1% per liter. How many liters must I take to be 95% sure that I have at least one organism?
+
+# Answer
+
+- $\frac{3}{0.01}=300 L$
+
+# Closing thoughts
+
+- No observed events, n trials, 95% upper bound -> $\frac{3}{n}$
+- Can solve for n as well, i.e. n=$\frac{3}{\lambda}$
