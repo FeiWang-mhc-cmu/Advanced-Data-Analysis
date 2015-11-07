@@ -44,7 +44,7 @@ $$ Relative cost =  \frac{n+1}{n}-(1-\pi)^n$$
 - Use professional judgement $\textbf{ranking}$ of a characteristic of interest to improve estimation of a population parameter
 
 #### E.g. Mean Age of trees
-- Appropriate judgment-based measurement (e.g. visual size of the tree, bigger then older)
+- Appropriate judgment-based measurement (e.g. visual size of the tree, bigger the tree older the age)
 1. Randomly select 3 trees, mark the smallest tree
 2. Randomly select another set of 3 trees, mark the medium one
 3. Randomly select another set of 3 trees, mark the biggest one
