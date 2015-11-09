@@ -16,6 +16,7 @@ trellis.par.set(theme=theme.mosaic())
 ```
 # Introduction
 
+- SRT 5.5
 - Sampling is an essential component of environmental studies
 - Can be very expensive and time-consuming -> need to provide as much information as possible
 - Occupational hazards -> importance of the sampling scheme
@@ -29,7 +30,9 @@ Always consider alternatives to simple random sampling for a potential increase 
 # Composite sampling
 - The number of required analyses is reduced by compositing several samples into one and analyzing the composited sample
 
-#### E.g. Contaminated hot spots
+
+# E.g. Contaminated hot spots
+
 - Pooling samples of 5 provides substantial savings for prevalences from 0.005 to 0.05
 
 $$ Relative cost =  \frac{n+1}{n}-(1-\pi)^n$$
@@ -37,14 +40,16 @@ $$ Relative cost =  \frac{n+1}{n}-(1-\pi)^n$$
 - relative cost: relative cost to no compositing
 - n: no. of samples in the pooled sample
 - $\pi$: prevalence of contaminated samples
-- e.g. if $\pi$=0.10, when n=5, relative cost=0.61; when n=30, relative cost=0.99 -> pools of five better  
+- e.g. if $\pi$=0.10, when n=1, RC=1.1; when n=5, RC=0.61; when n=30, RC=0.99 -> pools of five is better  
 
 
 # Ranked Set Sampling
 - Use professional judgement $\textbf{ranking}$ of a characteristic of interest to improve estimation of a population parameter
 
-#### E.g. Mean Age of trees
+
+# E.g. Mean Age of trees
 - Appropriate judgment-based measurement (e.g. visual size of the tree, bigger the tree older the age)
+
 1. Randomly select 3 trees, mark the smallest tree
 2. Randomly select another set of 3 trees, mark the medium one
 3. Randomly select another set of 3 trees, mark the biggest one
