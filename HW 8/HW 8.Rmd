@@ -64,6 +64,20 @@ Part one of your challenge is to generate a model for sales that will be used to
 
 SOLUTION:
 
+The three things that we originally want to improve in the email:
+1. Randomly choose a sample instead of filtering by date in a hope to avoid temporal correlation.
+
+Even though date was removed in the new dataset we included a variable for day of the week in order to account for some level of temporal correlation.
+
+2. Include distance in the model in order to account for spatial correlation.
+
+We included distance as a predictor in our model, but we found that it is only significant as a stand alone predictor and it was not particulary significant when used in interaction with other variables.
+
+3. Control for the store itself.
+
+This was done in our new model.
+
+
 ```{r}
 finalmod <- lm(sales ~ type + customers*promotion + as.factor(dow)*promotion +
                  as.factor(store)*as.factor(dow) + distance, data=merged)
