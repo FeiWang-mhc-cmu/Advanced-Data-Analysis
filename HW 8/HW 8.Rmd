@@ -65,6 +65,7 @@ Part one of your challenge is to generate a model for sales that will be used to
 SOLUTION:
 
 The three things that we originally want to improve in the email:
+
 1. Randomly choose a sample instead of filtering by date in a hope to avoid temporal correlation.
 
 Even though date was removed in the new dataset we included a variable for day of the week in order to account for some level of temporal correlation.
@@ -132,5 +133,17 @@ The plots are pretty interesting. Firstly, even though we notice that different 
 
 Secondly, only type b shows sales on Day 7 and the sales are exceptionally high, around 12,000 compared to only around 7,000 on average of other days. We are interested to know what type b is referring to and why it is the only type having sales on Day 7.
 
-Thirdly, even though type b shows great sales on Day 7, it is not the type that always has the greatest sales on other days. There are quite a number of extreme values occuring for type d on Day 1, 2, 3 and 5, while type b has the least variation among the four types. Knowing the differences between types will help us better interpret the plots.  
+Thirdly, even though type b shows great sales on Day 7, it is not the type that always has the greatest sales on other days. There are quite a number of extreme values occuring for type d on Day 1, 2, 3 and 5, while type b has the least variation among the four types. 
+
+```{r}
+outlier <- merged %>%
+  filter(dow < 4) %>%
+  filter(type == "d") %>%
+  arrange(desc(sales))
+
+head(outlier)
+```
+
+Except for one store 35, the rest of the highest sales belong to store 57 (i.e. the star store in type d). 
+
 
