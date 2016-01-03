@@ -1,0 +1,213 @@
+---
+title: "Observations needed in Constructing a Confidence Interval"
+author: "Fei Wang, STAT495"
+date: "September 28, 2015"
+output:
+  slidy_presentation: default
+  beamer_presentation:
+    colortheme: dolphin
+    fonttheme: structurebold
+    theme: AnnArbor
+---
+```{r message=FALSE, echo=FALSE}
+require(mosaic)
+options(digits=3)
+trellis.par.set(theme=theme.mosaic())
+```
+
+# Introduction
+
+## Statistical Rules of Thumb 1.14
+- Precision does not vary linearly with sample size
+- Width of CI is inversely proportional to the square root of the number of observations
+- Sample size, an estimate of variability, pivotal variable (t-statistics in normal distribution)
+
+# Assessment
+
+How many observations do you think are needed for constructing a confidence interval?
+
+# Rule of thumb
+
+The width of a confidence interval, involving estimation of variability and sample size, decreases rapidly until 12 observations and then decreases less rapidly.
+
+# Illustration
+
+```{r, fig.keep='last',echo=FALSE}
+A <- c()
+for(i in 1:30){
+  A[i] <- ((50+1.96*(10/sqrt(i)))-(50-1.96*(10/sqrt(i))))
+}
+
+plot(A, type = "l", main = "Relationship between Width of 95% CI and Sample Size", 
+    xlab = "Sample Size", ylab = "Width of CI")
+abline(v=12, col = "red")
+```
+
+# Simulation
+```{r, fig.keep='last', echo=FALSE}
+pop <- rnorm(100, mean = 50, sd = 10)
+
+
+size <- c()
+for(i in 1:30){
+  size[i] <- i}
+
+width <- c()
+a <- function(){
+  Width[i] <- function(){
+  sample <- sample(pop, size = size, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(size))-(mean-1.96*sd/sqrt(size))
+  }
+  a[i] <- c(sapply(1:100, Width[i]))
+  }
+
+
+
+
+
+
+
+
+Width2 <- function(i){
+  sample <- sample(pop, size = 2, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(2))-(mean-1.96*sd/sqrt(2))
+}
+a2 <- c(sapply(1:100, Width2))
+densityplot(a2)
+
+Width3 <- function(i){
+  sample <- sample(pop, size = 3, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(3))-(mean-1.96*sd/sqrt(3))
+}
+a3 <- c(sapply(1:100, Width3))
+
+Width4 <- function(i){
+  sample <- sample(pop, size = 4, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(4))-(mean-1.96*sd/sqrt(4))
+}
+a4 <- c(sapply(1:100, Width4))
+
+Width5 <- function(i){
+  sample <- sample(pop, size = 5, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(5))-(mean-1.96*sd/sqrt(5))
+}
+a5 <- c(sapply(1:100, Width5))
+
+Width8 <- function(i){
+  sample <- sample(pop, size = 8, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(8))-(mean-1.96*sd/sqrt(8))
+}
+a8 <- c(sapply(1:100, Width8))
+
+Width10 <- function(i){
+  sample <- sample(pop, size = 10, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(10))-(mean-1.96*sd/sqrt(10))
+}
+a10 <- c(sapply(1:100, Width10))
+
+Width11 <- function(i){
+  sample <- sample(pop, size = 11, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(11))-(mean-1.96*sd/sqrt(11))
+}
+a11 <- c(sapply(1:100, Width11))
+
+Width12 <- function(i){
+  sample <- sample(pop, size = 12, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(12))-(mean-1.96*sd/sqrt(12))
+}
+a12 <- c(sapply(1:100, Width12))
+
+Width13 <- function(i){
+  sample <- sample(pop, size = 13, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(13))-(mean-1.96*sd/sqrt(13))
+}
+a13 <- c(sapply(1:100, Width13))
+
+Width14 <- function(i){
+  sample <- sample(pop, size = 14, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(14))-(mean-1.96*sd/sqrt(14))
+}
+a14 <- c(sapply(1:100, Width14))
+
+Width15 <- function(i){
+  sample <- sample(pop, size = 15, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(15))-(mean-1.96*sd/sqrt(15))
+}
+a15 <- c(sapply(1:100, Width15))
+
+Width18 <- function(i){
+  sample <- sample(pop, size = 18, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(18))-(mean-1.96*sd/sqrt(18))
+}
+a18 <- c(sapply(1:100, Width18))
+
+Width20 <- function(i){
+  sample <- sample(pop, size = 20, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(20))-(mean-1.96*sd/sqrt(20))
+}
+a20 <- c(sapply(1:100, Width20))
+
+Width30 <- function(i){
+  sample <- sample(pop, size = 30, replace = TRUE)
+  mean <- mean(sample)
+  sd <- sd(sample) 
+  width <- (mean+1.96*sd/sqrt(30))-(mean-1.96*sd/sqrt(30))
+}
+a30 <- c(sapply(1:100, Width30))
+
+plot(density(a2), xlim=c(0,40), ylim=c(0,0.3), 
+    main= "Distribution of Width of CI for Different Sample Size", xlab="Width of CI", ylab="Density") 
+lines (density(a3))
+lines (density(a4))
+lines (density(a5))
+lines (density(a8))
+lines (density(a10),col="blue")
+lines (density(a11),col="green")
+lines (density(a12),col="red")
+lines (density(a13),col="yellow")
+lines (density(a14),col="pink")
+lines (density(a15))
+lines (density(a18))
+lines (density(a20))
+```
+
+Theoretical: 27.72 22.63 19.60 17.53 13.86 12.40 11.82 11.32 10.87 10.48 10.12 9.24  8.77  
+Blue:10, Green:11, Red:12, Yellow:13, Pink:14
+
+-----
+
+
+## Closing thoughts
+
+- The width of CI decreases as sample size increases
+- If variance has to be estimated from the data, uncertainty due to this estimation, which is incorporated in the t-statistics, decreases also as the sample size increases
+
+
