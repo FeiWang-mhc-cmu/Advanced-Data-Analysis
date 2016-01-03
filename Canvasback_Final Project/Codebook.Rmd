@@ -1,0 +1,82 @@
+---
+title: "Appendix B: Codebook"
+author: "Anusha and Fei"
+date: "December 17, 2015"
+output: pdf_document
+---
+
+$\textbf{canvasbackEstimates.csv}$
+
+- stratum: geographic location  
+
+- year: year in which the data was collected  
+
+- popEst: estimated canvasback population in strata  
+
+- sePopEst: standard error of the canvasback population estimate  
+
+- VCF: visibility correction factor to account for observer error  
+
+- seVCF: standard error of visibility correction factor  
+  
+\textbf{pondEstimates.csv}    
+
+- stratum: geographic location  
+
+- year: year in which the data was collected  
+
+- pondEst: estimated number of ponds in strata   
+
+- sePondEst: standard error of pond estimate  
+
+- VCF: visibility correction factor to account for observer error  
+
+- seVCF: standard error of visibility correction factor  
+  
+$\textbf{canvasHarvest.csv}$  
+
+- year: year in which the data was collected  
+
+- harvest: estimated number of canvasbacks hunted  
+
+- ageRatio: estimated production rate (immature/adults)  
+
+- season: hunting designation - open, closed, restricted with 1-bird bag, restricted with 
+
+- 2-bird bags
+
+
+$\textbf{segmentCounts-1975-99.csv}$
+
+- Month,Day,Year: 1975-1999
+
+- Str: stratum 
+
+- Seg: segment 
+
+- AOU: 1470=canvasback, 9991=pond
+
+- Single: number of single male canvasback 
+
+- Pair: number of pairs of male and female 
+
+- Grp: 3 or more birds that cannot be divided into pairs and single males, lone females are not counted
+
+
+$\textbf{segmentCounts-2000-13.csv}$
+
+- Year: 2000-2013
+
+- Str: stratum 
+
+- Seg: segment 
+
+- Species: canv/pond (refering to canvasback)
+
+- Single: number of single male canvasback 
+
+- Pair: number of pairs of male and female 
+
+- Grp: 3 or more birds that cannot be divided into pairs and single males, lone females are not counted
+
+- GrpLG: large group: flocks greater than 45 are not included in the estimates because these are assumed to be non-breeding birds

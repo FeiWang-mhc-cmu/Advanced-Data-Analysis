@@ -1,0 +1,29 @@
+Codebook for CollegeScore Card Mini Project
+Christina Wang and Fei Wang
+
+We extracted the following variables from the master dataset and stored them in a new dataset called df2011:
+
+1) INSTNM: Institution name (string)
+2) ZIP: ZIP code (integer)
+3) st_fips: FIPS code (integer); five-digit Federal Information Processing Standard (FIPS) code which uniquely identifies counties and county equivalents in the United States, certain U.S. possessions, and certain freely associated states.
+4) region: Region (IPEDS); 1 = New England (CT, ME, MA, NH, RI, VT), 2 = Mid East (DE, DC, MD, NJ, NY, PA), 3 = Great Lakes (IL, IN, MI, OH, WI), 4 = Plains (IA, KS, MN, MO, NE, ND, SD), 5 = Southeast (AL, AR, FL, GA, KY, LA, MS, NC, SC, TN, VA, WV), 6 = Southwest (AZ, NM, OK, TX), 7 = Rocky Mountains (CO, ID, MT, UT, WY), 8 = Far West (AK, CA, HI, NV, OR, WA), and 9 = Outlying Areas (AS, FM, GU, MH, MP, PR, PW, VI) [Will omit 9 in our final analysis]
+5) CONTROL: Control of institution; 1 = public, 2 = private non-profit, and 3 = private for-profit
+6) DEBT_MDN_SUPP: Median debt, data suppressed for institutions where sample size n is less than 30
+7) GRAD_DEBT_MDN: Median debt for students who have completed; range (1000, 47190)
+8) WDRAW_DEBT_MDN: Median debt for students who have not completed; range (1678, 29640)
+9) GRAD_DEBT_N: The number of students in the median debt completers cohort (integer); range (0, 80140)
+10) WDRAW_DEBT_N: The number of students in the median debt withdrawn cohort (integer); range (0, 291000)
+11) mn_earn_wne_p10: Mean earnings of students working and not enrolled 10 years after entry (all earnings integer)
+12) md_earn_wne_p10: Median earnings of students working and not enrolled 10 years after entry 
+13) pct10_earn_wne_p10: 10th percentile of earnings of students working and not enrolled 10 years after entry
+14) pct25_earn_wne_p10: 25th percentile of earnings of students working and not enrolled 10 years after entry
+15) pct75_earn_wne_p10: 75th percentile of earnings of students working and not enrolled 10 years after entry
+16) pct90_earn_wne_p10: 90th percentile of earnings of students working and not enrolled 10 years after entry
+
+
+Some control variables to consider:
+
+ADM_RATE: Admission rate; range (0.0626, 1.0000)
+PCTPELL: Percentage of undergraduates who receive a Pell Grant; range (0, 1)
+C150_4: Completion rate for first-time, full-time students at four-year institutions (150% of expected completion time); range (0, 1)
+
